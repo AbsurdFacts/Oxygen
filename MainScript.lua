@@ -27,6 +27,21 @@ local Window = Rayfield:CreateWindow({
 })
 local Tab = Window:CreateTab("Combat", 4483362458) -- Title, Image
 
+local ChatSpammer = Tab:CreateButton({
+	Name = "ChatSpammer",
+	Callback = function()
+		while true do
+			wait(0.5)
+			local args = {
+				[1] = "OXYGEN ON TOP",
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+		end
+	end,
+})
+
 local Speed = Tab:CreateButton({
 	Name = "ESP",
 	Callback = function()
@@ -181,6 +196,106 @@ local Bodyguard = Tab:CreateButton({
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
 				until v.Character.Humanoid.Health == 0 or not v.Character:FindFirstChild("Humanoid")
 			end
+		end
+	end,
+})
+local ChatSpammer = Tab:CreateButton({
+	Name = "ChatSpammer",
+	Callback = function()
+		while true do
+			wait(1)
+			local args = {
+				[1] = "OXYGEN ON TOP",
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+		end
+	end,
+})
+local DropAll = Tab:CreateButton({
+	Name = "DropAllIron",
+	Callback = function()
+		while true do
+			wait(0.1)
+			local plr = game.Players.LocalPlayer
+			local args = {
+				[1] = {
+					["item"] = game:GetService("ReplicatedStorage"):WaitForChild("Inventories"):WaitForChild(plr):WaitForChild("iron")
+				}
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("rbxts_include"):WaitForChild("node_modules"):WaitForChild("@rbxts"):WaitForChild("net"):WaitForChild("out"):WaitForChild("_NetManaged"):WaitForChild("DropItem"):InvokeServer(unpack(args))
+		end
+	end,
+})
+local Fly = Tab:CreateButton({
+	Name = "Fly",
+	Callback = function()
+		Rayfield:Notify({
+			Title = "Oxygen",
+			Content = "Fly enabled! Use V to Fly.",
+			Duration = 6.5,
+			Image = 4483362458,
+			Actions = { -- Notification Buttons
+				Ignore = {
+					Name = "Okay!",
+					Callback = function()
+						print("The user tapped Okay!")
+					end
+				},
+			},
+		})
+		-- Advanced Fly Script for BedWars
+
+		-- Set the flying speed (adjust this value to your liking)
+		local flySpeed = 23
+
+		-- Create a variable to track the flying state
+		local isFlying = false
+
+		-- Create a function to toggle flying
+		local function toggleFly()
+			-- Check if the player is already flying
+			if isFlying then
+				-- Stop flying
+				isFlying = false
+				game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+			else
+				-- Start flying
+				isFlying = true
+				game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = flySpeed
+			end
+		end
+
+		-- Create a function to update the player's position while flying
+		local function updatePosition()
+			-- Get the player's character
+			local character = game:GetService("Players").LocalPlayer.Character
+
+			-- Check if the player is flying
+			if isFlying then
+				-- Get the player's humanoid
+				local humanoid = character:FindFirstChild("Humanoid")
+
+				-- Update the player's position based on the camera direction
+				local camera = workspace.CurrentCamera
+				local cameraDirection = camera.CFrame.LookVector
+				local movement = cameraDirection * flySpeed
+				character.HumanoidRootPart.Velocity = movement
+			end
+		end
+
+		-- Bind the toggle fly function to the "c" key press
+		game:GetService("UserInputService").InputBegan:Connect(function(input)
+			if input.KeyCode == Enum.KeyCode.V then
+				toggleFly()
+			end
+		end)
+
+		-- Create a loop to update the player's position
+		while wait() do
+			updatePosition()
 		end
 	end,
 })
