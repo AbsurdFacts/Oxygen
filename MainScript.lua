@@ -18,6 +18,7 @@ local Cape = Instance.new("TextButton")
 local Visual = Instance.new("Frame")
 local UICorner_3 = Instance.new("UICorner")
 local VText = Instance.new("TextLabel")
+local skybox = Instance.new("TextButton")
 
 --Properties:
 
@@ -62,7 +63,6 @@ HackFrame.BackgroundTransparency = 1.030
 HackFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 HackFrame.BorderSizePixel = 0
 HackFrame.Size = UDim2.new(1, 0, 1, 0)
-HackFrame.Visible = false
 
 Combat.Name = "Combat"
 Combat.Parent = HackFrame
@@ -176,9 +176,24 @@ VText.TextScaled = true
 VText.TextSize = 14.000
 VText.TextWrapped = true
 
+skybox.Name = "skybox"
+skybox.Parent = Visual
+skybox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+skybox.BackgroundTransparency = 1.000
+skybox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+skybox.BorderSizePixel = 0
+skybox.Position = UDim2.new(0.24278982, 0, 0.175561801, 0)
+skybox.Size = UDim2.new(0.511508942, 0, 0.0702247173, 0)
+skybox.Font = Enum.Font.DenkOne
+skybox.Text = "skybox"
+skybox.TextColor3 = Color3.fromRGB(0, 0, 0)
+skybox.TextScaled = true
+skybox.TextSize = 14.000
+skybox.TextWrapped = true
+
 -- Scripts:
 
-local function DIYZZGN_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
+local function VHBK_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local openFrameButton = script.Parent -- Reference to the OpenFrame TextButton
@@ -198,8 +213,8 @@ local function DIYZZGN_fake_script() -- OpenFrame.ToggleHackFrameVisibility
 	-- Connect the function to the button's click event
 	openFrameButton.MouseButton1Click:Connect(toggleHackFrameVisibility)
 end
-coroutine.wrap(DIYZZGN_fake_script)()
-local function RABTDJM_fake_script() -- Fly.LocalScript 
+coroutine.wrap(VHBK_fake_script)()
+local function OMWTUZ_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	-- Advanced Fly Script for BedWars
@@ -250,8 +265,8 @@ local function RABTDJM_fake_script() -- Fly.LocalScript
 		updatePosition()
 	end
 end
-coroutine.wrap(RABTDJM_fake_script)()
-local function VIMNVJM_fake_script() -- Speed.LocalScript 
+coroutine.wrap(OMWTUZ_fake_script)()
+local function ZAJGO_fake_script() -- Speed.LocalScript 
 	local script = Instance.new('LocalScript', Speed)
 
 	local SpeedToggled = false
@@ -267,8 +282,8 @@ local function VIMNVJM_fake_script() -- Speed.LocalScript
 	end
 	script.Parent.MouseButton1Click:Connect(Speed)
 end
-coroutine.wrap(VIMNVJM_fake_script)()
-local function ELOHQOH_fake_script() -- Killaura.LocalScript 
+coroutine.wrap(ZAJGO_fake_script)()
+local function RSAL_fake_script() -- Killaura.LocalScript 
 	local script = Instance.new('LocalScript', Killaura)
 
 	local Players = game:GetService("Players")
@@ -451,8 +466,8 @@ local function ELOHQOH_fake_script() -- Killaura.LocalScript
 	--  Killaura
 	script.Parent.MouseButton1Click:Connect(EnableKillaura)
 end
-coroutine.wrap(ELOHQOH_fake_script)()
-local function ZFZQHC_fake_script() -- Cape.LocalScript 
+coroutine.wrap(RSAL_fake_script)()
+local function ERJY_fake_script() -- Cape.LocalScript 
 	local script = Instance.new('LocalScript', Cape)
 
 	local Lplr = game.Players.LocalPlayer
@@ -495,4 +510,34 @@ local function ZFZQHC_fake_script() -- Cape.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(CreateCape)
 end
-coroutine.wrap(ZFZQHC_fake_script)()
+coroutine.wrap(ERJY_fake_script)()
+local function QHTQCBM_fake_script() -- skybox.LocalScript 
+	local script = Instance.new('LocalScript', skybox)
+
+	local Images = {--\\What 99% Of you like to see xd
+		"rbxassetid://14993957229", 
+		"rbxassetid://14993958854",
+		"rbxassetid://14993961695"
+	} 
+	local sky = Instance.new("Sky", game.Lighting)
+	
+	local function Sky()
+		sky.SkyboxBk = Images[1]
+		sky.SkyboxDn = Images[2]
+		sky.SkyboxFt = Images[2]
+		sky.SkyboxLf = Images[3]
+		sky.SkyboxRt = Images[1]
+		sky.SkyboxUp = Images[1]
+		sky.Parent = game.Lighting
+	end
+	script.Parent.MouseButton1Click:Connect(Sky)
+end
+coroutine.wrap(QHTQCBM_fake_script)()
+local function DDDN_fake_script() -- MainGui.LocalScript 
+	local script = Instance.new('LocalScript', MainGui)
+
+	game:GetService("UserInputService").JumpRequest:connect(function()
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end)
+end
+coroutine.wrap(DDDN_fake_script)()
