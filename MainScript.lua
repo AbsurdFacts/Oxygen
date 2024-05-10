@@ -216,7 +216,7 @@ local function VYJIRM_fake_script() -- Fly.LocalScript
 		if isFlying then
 			-- Stop flying
 			isFlying = false
-			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
 		else
 			-- Start flying
 			isFlying = true
@@ -259,7 +259,7 @@ local function MMCYBH_fake_script() -- Speed.LocalScript
 	local function Speed()
 		if SpeedToggled == false then
 			SpeedToggled = true
-			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
 		elseif SpeedToggled == true then
 			SpeedToggled = false
 			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
