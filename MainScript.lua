@@ -194,7 +194,7 @@ ChatSpammer.TextWrapped = true
 
 -- Scripts:
 
-local function BISAKAT_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
+local function KYGEWF_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local openFrameButton = script.Parent -- Reference to the OpenFrame TextButton
@@ -214,8 +214,8 @@ local function BISAKAT_fake_script() -- OpenFrame.ToggleHackFrameVisibility
 	-- Connect the function to the button's click event
 	openFrameButton.MouseButton1Click:Connect(toggleHackFrameVisibility)
 end
-coroutine.wrap(BISAKAT_fake_script)()
-local function ICYA_fake_script() -- Fly.LocalScript 
+coroutine.wrap(KYGEWF_fake_script)()
+local function ZDJS_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	-- Advanced Fly Script for BedWars
@@ -266,8 +266,8 @@ local function ICYA_fake_script() -- Fly.LocalScript
 		updatePosition()
 	end
 end
-coroutine.wrap(ICYA_fake_script)()
-local function LMJNZKI_fake_script() -- Speed.LocalScript 
+coroutine.wrap(ZDJS_fake_script)()
+local function RBLQMRJ_fake_script() -- Speed.LocalScript 
 	local script = Instance.new('LocalScript', Speed)
 
 	local SpeedToggled = false
@@ -275,7 +275,7 @@ local function LMJNZKI_fake_script() -- Speed.LocalScript
 	local function Speed()
 		if SpeedToggled == false then
 			SpeedToggled = true
-			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
 		elseif SpeedToggled == true then
 			SpeedToggled = false
 			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
@@ -283,8 +283,8 @@ local function LMJNZKI_fake_script() -- Speed.LocalScript
 	end
 	script.Parent.MouseButton1Click:Connect(Speed)
 end
-coroutine.wrap(LMJNZKI_fake_script)()
-local function UUBUAW_fake_script() -- Killaura.LocalScript 
+coroutine.wrap(RBLQMRJ_fake_script)()
+local function NKXUYPN_fake_script() -- Killaura.LocalScript 
 	local script = Instance.new('LocalScript', Killaura)
 
 	local Players = game:GetService("Players")
@@ -411,8 +411,8 @@ local function UUBUAW_fake_script() -- Killaura.LocalScript
 	
 	local SwordAnimations = {
 		["Slow"] = {
-			{CFrame = CFrame.new(0, 0, 3) * CFrame.Angles(math.rad(220), math.rad(100), math.rad(100)),Time = 0.25},
-			{CFrame = CFrame.new(1, 2, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), Time = 0.25}
+			{CFrame = CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(220), math.rad(100), math.rad(100)),Time = 0.25},
+			{CFrame = CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), Time = 0.25}
 		}
 	}
 	
@@ -467,8 +467,8 @@ local function UUBUAW_fake_script() -- Killaura.LocalScript
 	--  Killaura
 	script.Parent.MouseButton1Click:Connect(EnableKillaura)
 end
-coroutine.wrap(UUBUAW_fake_script)()
-local function AXHMXE_fake_script() -- Cape.LocalScript 
+coroutine.wrap(NKXUYPN_fake_script)()
+local function RAGRS_fake_script() -- Cape.LocalScript 
 	local script = Instance.new('LocalScript', Cape)
 
 	local Lplr = game.Players.LocalPlayer
@@ -511,8 +511,8 @@ local function AXHMXE_fake_script() -- Cape.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(CreateCape)
 end
-coroutine.wrap(AXHMXE_fake_script)()
-local function OBRY_fake_script() -- ChatSpammer.LocalScript 
+coroutine.wrap(RAGRS_fake_script)()
+local function TLBC_fake_script() -- ChatSpammer.LocalScript 
 	local script = Instance.new('LocalScript', ChatSpammer)
 
 	local Lplr = game.Players.LocalPlayer
@@ -540,39 +540,36 @@ local function OBRY_fake_script() -- ChatSpammer.LocalScript
 	end
 	
 	local function ChatSpam()
-		while true do
-			wait(0.1)
-			local Randomized = math.random(0, 5)
-			local KillMessage = ""
-
-			if Randomized == 0 then
-				KillMessage = "awa | Oxygen On Top"
-			end
-
-			if Randomized ~= 0 then
-				KillMessage = "💀. | Oxygen On Top"
-			end
-
-			if Randomized == 2 then
-				KillMessage = "Good Game. | Oxygen On Top"
-			end
-
-			if Randomized == 3 then
-				KillMessage = "I am not cheating, my gaming chair is. | Oxygen On Top"
-			end
-
-			if Randomized == 4 then
-				KillMessage = "Oxygen On The Top. | Oxygen On Top"
-			end
-
-			if Randomized == 5 then
-				KillMessage = "Oxygen The #1 Best. | Oxygen On Top"
-			end
-
-			SendChatMessage(KillMessage)
+		local Randomized = math.random(0, 5)
+		local KillMessage = ""
+	
+		if Randomized == 0 then
+			KillMessage = "awa | Oxygen On Top"
 		end
+	
+		if Randomized ~= 0 then
+			KillMessage = "💀. | Oxygen On Top"
 		end
+	
+		if Randomized == 2 then
+			KillMessage = "Good Game. | Oxygen On Top"
+		end
+	
+		if Randomized == 3 then
+			KillMessage = "I am not cheating, my gaming chair is. | Oxygen On Top"
+		end
+	
+		if Randomized == 4 then
+			KillMessage = "Oxygen On The Top. | Oxygen On Top"
+		end
+	
+		if Randomized == 5 then
+			KillMessage = "Oxygen The #1 Best. | Oxygen On Top"
+		end
+	
+		SendChatMessage(KillMessage)
+	end
 	
 	script.Parent.MouseButton1Click:Connect(ChatSpam)
 end
-coroutine.wrap(OBRY_fake_script)()
+coroutine.wrap(TLBC_fake_script)()
