@@ -178,7 +178,7 @@ VText.TextWrapped = true
 
 -- Scripts:
 
-local function DDWG_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
+local function DIYZZGN_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local openFrameButton = script.Parent -- Reference to the OpenFrame TextButton
@@ -198,8 +198,8 @@ local function DDWG_fake_script() -- OpenFrame.ToggleHackFrameVisibility
 	-- Connect the function to the button's click event
 	openFrameButton.MouseButton1Click:Connect(toggleHackFrameVisibility)
 end
-coroutine.wrap(DDWG_fake_script)()
-local function VYJIRM_fake_script() -- Fly.LocalScript 
+coroutine.wrap(DIYZZGN_fake_script)()
+local function RABTDJM_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	-- Advanced Fly Script for BedWars
@@ -250,8 +250,8 @@ local function VYJIRM_fake_script() -- Fly.LocalScript
 		updatePosition()
 	end
 end
-coroutine.wrap(VYJIRM_fake_script)()
-local function MMCYBH_fake_script() -- Speed.LocalScript 
+coroutine.wrap(RABTDJM_fake_script)()
+local function VIMNVJM_fake_script() -- Speed.LocalScript 
 	local script = Instance.new('LocalScript', Speed)
 
 	local SpeedToggled = false
@@ -267,8 +267,8 @@ local function MMCYBH_fake_script() -- Speed.LocalScript
 	end
 	script.Parent.MouseButton1Click:Connect(Speed)
 end
-coroutine.wrap(MMCYBH_fake_script)()
-local function DKBB_fake_script() -- Killaura.LocalScript 
+coroutine.wrap(VIMNVJM_fake_script)()
+local function ELOHQOH_fake_script() -- Killaura.LocalScript 
 	local script = Instance.new('LocalScript', Killaura)
 
 	local Players = game:GetService("Players")
@@ -451,8 +451,8 @@ local function DKBB_fake_script() -- Killaura.LocalScript
 	--  Killaura
 	script.Parent.MouseButton1Click:Connect(EnableKillaura)
 end
-coroutine.wrap(DKBB_fake_script)()
-local function DLJD_fake_script() -- Cape.LocalScript 
+coroutine.wrap(ELOHQOH_fake_script)()
+local function ZFZQHC_fake_script() -- Cape.LocalScript 
 	local script = Instance.new('LocalScript', Cape)
 
 	local Lplr = game.Players.LocalPlayer
@@ -495,4 +495,4 @@ local function DLJD_fake_script() -- Cape.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(CreateCape)
 end
-coroutine.wrap(DLJD_fake_script)()
+coroutine.wrap(ZFZQHC_fake_script)()
