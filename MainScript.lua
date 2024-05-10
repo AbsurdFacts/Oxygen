@@ -18,7 +18,6 @@ local Cape = Instance.new("TextButton")
 local Visual = Instance.new("Frame")
 local UICorner_3 = Instance.new("UICorner")
 local VText = Instance.new("TextLabel")
-local ChatSpammer = Instance.new("TextButton")
 
 --Properties:
 
@@ -177,24 +176,9 @@ VText.TextScaled = true
 VText.TextSize = 14.000
 VText.TextWrapped = true
 
-ChatSpammer.Name = "ChatSpammer"
-ChatSpammer.Parent = Visual
-ChatSpammer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ChatSpammer.BackgroundTransparency = 1.000
-ChatSpammer.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ChatSpammer.BorderSizePixel = 0
-ChatSpammer.Position = UDim2.new(0.242966756, 0, 0.175561801, 0)
-ChatSpammer.Size = UDim2.new(0.511508942, 0, 0.0702247173, 0)
-ChatSpammer.Font = Enum.Font.DenkOne
-ChatSpammer.Text = "ChatSpammer"
-ChatSpammer.TextColor3 = Color3.fromRGB(0, 0, 0)
-ChatSpammer.TextScaled = true
-ChatSpammer.TextSize = 14.000
-ChatSpammer.TextWrapped = true
-
 -- Scripts:
 
-local function KYGEWF_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
+local function DDWG_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local openFrameButton = script.Parent -- Reference to the OpenFrame TextButton
@@ -214,8 +198,8 @@ local function KYGEWF_fake_script() -- OpenFrame.ToggleHackFrameVisibility
 	-- Connect the function to the button's click event
 	openFrameButton.MouseButton1Click:Connect(toggleHackFrameVisibility)
 end
-coroutine.wrap(KYGEWF_fake_script)()
-local function ZDJS_fake_script() -- Fly.LocalScript 
+coroutine.wrap(DDWG_fake_script)()
+local function VYJIRM_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	-- Advanced Fly Script for BedWars
@@ -266,8 +250,8 @@ local function ZDJS_fake_script() -- Fly.LocalScript
 		updatePosition()
 	end
 end
-coroutine.wrap(ZDJS_fake_script)()
-local function RBLQMRJ_fake_script() -- Speed.LocalScript 
+coroutine.wrap(VYJIRM_fake_script)()
+local function MMCYBH_fake_script() -- Speed.LocalScript 
 	local script = Instance.new('LocalScript', Speed)
 
 	local SpeedToggled = false
@@ -283,8 +267,8 @@ local function RBLQMRJ_fake_script() -- Speed.LocalScript
 	end
 	script.Parent.MouseButton1Click:Connect(Speed)
 end
-coroutine.wrap(RBLQMRJ_fake_script)()
-local function NKXUYPN_fake_script() -- Killaura.LocalScript 
+coroutine.wrap(MMCYBH_fake_script)()
+local function DKBB_fake_script() -- Killaura.LocalScript 
 	local script = Instance.new('LocalScript', Killaura)
 
 	local Players = game:GetService("Players")
@@ -467,8 +451,8 @@ local function NKXUYPN_fake_script() -- Killaura.LocalScript
 	--  Killaura
 	script.Parent.MouseButton1Click:Connect(EnableKillaura)
 end
-coroutine.wrap(NKXUYPN_fake_script)()
-local function RAGRS_fake_script() -- Cape.LocalScript 
+coroutine.wrap(DKBB_fake_script)()
+local function DLJD_fake_script() -- Cape.LocalScript 
 	local script = Instance.new('LocalScript', Cape)
 
 	local Lplr = game.Players.LocalPlayer
@@ -511,65 +495,4 @@ local function RAGRS_fake_script() -- Cape.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(CreateCape)
 end
-coroutine.wrap(RAGRS_fake_script)()
-local function TLBC_fake_script() -- ChatSpammer.LocalScript 
-	local script = Instance.new('LocalScript', ChatSpammer)
-
-	local Lplr = game.Players.LocalPlayer
-	
-	local CollectionService = game:GetService("CollectionService")
-	local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	local UserInputService = game:GetService("UserInputService")
-	local LightingService = game:GetService("Lighting")
-	local PlayerService = game:GetService("Players")
-	local TweenService = game:GetService("TweenService")
-	local StatsService = game:GetService("Stats")
-	local HttpService = game:GetService("HttpService")
-	local RunService = game:GetService("RunService")
-	local WorkSpace = game:GetService("Workspace") or game.Workspace
-	
-	local SendMessageRemote = ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
-	
-	local function SendChatMessage(Message)
-		local Arguments = {
-			[1] = Message,
-			[2] = "All"
-		}
-	
-		SendMessageRemote:FireServer(unpack(Arguments))
-	end
-	
-	local function ChatSpam()
-		local Randomized = math.random(0, 5)
-		local KillMessage = ""
-	
-		if Randomized == 0 then
-			KillMessage = "awa | Oxygen On Top"
-		end
-	
-		if Randomized ~= 0 then
-			KillMessage = "💀. | Oxygen On Top"
-		end
-	
-		if Randomized == 2 then
-			KillMessage = "Good Game. | Oxygen On Top"
-		end
-	
-		if Randomized == 3 then
-			KillMessage = "I am not cheating, my gaming chair is. | Oxygen On Top"
-		end
-	
-		if Randomized == 4 then
-			KillMessage = "Oxygen On The Top. | Oxygen On Top"
-		end
-	
-		if Randomized == 5 then
-			KillMessage = "Oxygen The #1 Best. | Oxygen On Top"
-		end
-	
-		SendChatMessage(KillMessage)
-	end
-	
-	script.Parent.MouseButton1Click:Connect(ChatSpam)
-end
-coroutine.wrap(TLBC_fake_script)()
+coroutine.wrap(DLJD_fake_script)()
