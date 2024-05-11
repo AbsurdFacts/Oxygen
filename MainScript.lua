@@ -1,7 +1,6 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
+--[[
+so yea oxygen 1.8 w
+]]--
 
 local MainGui = Instance.new("ScreenGui")
 local OpenFrame = Instance.new("TextButton")
@@ -23,8 +22,6 @@ local World = Instance.new("Frame")
 local UICorner_4 = Instance.new("UICorner")
 local WText = Instance.new("TextLabel")
 local ChatSpammer = Instance.new("TextButton")
-
---Properties:
 
 MainGui.Name = "MainGui"
 MainGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
