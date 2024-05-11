@@ -23,6 +23,8 @@ local UICorner_4 = Instance.new("UICorner")
 local WText = Instance.new("TextLabel")
 local ChatSpammer = Instance.new("TextButton")
 
+MainGui.ResetOnSpawn = false
+
 MainGui.Name = "MainGui"
 MainGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 MainGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
