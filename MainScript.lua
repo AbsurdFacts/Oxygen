@@ -2,10 +2,7 @@
 fuck vape private
 ]]--
 
-local Folder = makefolder("oxygen")
-local Saved = writefile("saved.txt","true")
-
-Saved.Parent = Folder
+writefile("saved.txt","true")
 
 local MainGui = Instance.new("ScreenGui")
 local OpenFrame = Instance.new("TextButton")
