@@ -2,6 +2,8 @@
 fuck vape private
 ]]--
 
+writefile("OxygenSaveData.txt","SaveData")
+
 local MainGui = Instance.new("ScreenGui")
 local OpenFrame = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
@@ -614,5 +616,3 @@ local function BBFYKBH_fake_script() -- MainGui.LocalScript
 	end)
 end
 coroutine.wrap(BBFYKBH_fake_script)()
-
-writefile("OxygenSaveData.txt","SaveData")
