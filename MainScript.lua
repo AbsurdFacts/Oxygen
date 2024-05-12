@@ -2,17 +2,22 @@
 so yea oxygen 1.8 w
 ]]--
 
-local file = io.open("oxygen.txt", "w")
+function writefile(filename, content)
+    local file = io.open(filename, "w")
+    if file then
+        file:write(content)
+        file:close()
+        return true
+    else
+        return false
+    end
+end
 
-if file then
-    -- Write content to the file
-    file:write("lol")
-    file:write("this aint done yet")
-
-    -- Close the file
-    file:close()
+-- Usage
+if writefile("hi.txt", "Hello, world!\nThis is Lua file writing example.") then
+    print("File 'hi.txt' was successfully written.")
 else
-    print("Failed to open the file for writing.")
+    print("Failed to write to file 'hi.txt'.")
 end
 
 local MainGui = Instance.new("ScreenGui")
