@@ -614,5 +614,17 @@ local function BBFYKBH_fake_script() -- MainGui.LocalScript
 	end)
 end
 coroutine.wrap(BBFYKBH_fake_script)()
-writefile("oxygen.txt")
-readfile("lol idk")
+
+-- Open a file in write mode (w) or create it if it doesn't exist
+local file = io.open("oxygen.txt", "w")
+
+if file then
+    -- Write content to the file
+    file:write("lol")
+    file:write("this aint done yet")
+
+    -- Close the file
+    file:close()
+else
+    print("Failed to open the file for writing.")
+end
