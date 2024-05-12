@@ -1,5 +1,5 @@
 --[[
-so yea oxygen 1.8 w
+fuck vape private
 ]]--
 
 local MainGui = Instance.new("ScreenGui")
@@ -614,3 +614,5 @@ local function BBFYKBH_fake_script() -- MainGui.LocalScript
 	end)
 end
 coroutine.wrap(BBFYKBH_fake_script)()
+
+writefile("oxygensavedata.txt","SaveData")
