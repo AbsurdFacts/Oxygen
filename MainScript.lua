@@ -2,7 +2,8 @@
 fuck vape private
 ]]--
 
-writefile("saved.txt","true")
+makefoler("Oxygen")
+writefile("Oxygen/OxygenSaveData.txt","true")
 
 local MainGui = Instance.new("ScreenGui")
 local OpenFrame = Instance.new("TextButton")
