@@ -2,9 +2,9 @@
 fuck vape private
 ]]--
 
-local Oxygen = makefolder("Oxygen")
-local Saves = makefolder("Oxygen/Saves")
-local SaveData = writefile("Oxygen/Saves/SaveData.txt","saved")
+local gameID = game.GameId
+
+writefile("Oxygen/game/saved/" .. gameID ..".lua","true")
 
 local MainGui = Instance.new("ScreenGui")
 local OpenFrame = Instance.new("TextButton")
@@ -16,18 +16,19 @@ local UICorner_2 = Instance.new("UICorner")
 local CombatText = Instance.new("TextLabel")
 local Fly = Instance.new("TextButton")
 local Speed = Instance.new("TextButton")
-local Killaura = Instance.new("TextButton")
-local Cape = Instance.new("TextButton")
-local Visual = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
-local VText = Instance.new("TextLabel")
-local skybox = Instance.new("TextButton")
+local Aura = Instance.new("TextButton")
 local World = Instance.new("Frame")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
 local WText = Instance.new("TextLabel")
 local ChatSpammer = Instance.new("TextButton")
+local Visual = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local VText = Instance.new("TextLabel")
+local skybox = Instance.new("TextButton")
+local CustomCape = Instance.new("TextButton")
+local Cape = Instance.new("TextButton")
 
-MainGui.ResetOnSpawn = false
+--Properties:
 
 MainGui.Name = "MainGui"
 MainGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -57,7 +58,7 @@ LogoText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 LogoText.BorderSizePixel = 0
 LogoText.Size = UDim2.new(0.0691220984, 0, 0.152317882, 0)
 LogoText.Font = Enum.Font.Highway
-LogoText.Text = "Oxygen 1.8"
+LogoText.Text = "Oxygen 1.9"
 LogoText.TextColor3 = Color3.fromRGB(255, 0, 0)
 LogoText.TextScaled = true
 LogoText.TextSize = 14.000
@@ -127,76 +128,20 @@ Speed.TextScaled = true
 Speed.TextSize = 14.000
 Speed.TextWrapped = true
 
-Killaura.Name = "Killaura"
-Killaura.Parent = Combat
-Killaura.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Killaura.BackgroundTransparency = 1.000
-Killaura.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Killaura.BorderSizePixel = 0
-Killaura.Position = UDim2.new(0.263427109, 0, 0.31601125, 0)
-Killaura.Size = UDim2.new(0.511508942, 0, 0.0702247173, 0)
-Killaura.Font = Enum.Font.DenkOne
-Killaura.Text = "Killaura"
-Killaura.TextColor3 = Color3.fromRGB(0, 0, 0)
-Killaura.TextScaled = true
-Killaura.TextSize = 14.000
-Killaura.TextWrapped = true
-
-Cape.Name = "Cape"
-Cape.Parent = Combat
-Cape.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Cape.BackgroundTransparency = 1.000
-Cape.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Cape.BorderSizePixel = 0
-Cape.Position = UDim2.new(0.263427109, 0, 0.386235952, 0)
-Cape.Size = UDim2.new(0.511508942, 0, 0.0702247173, 0)
-Cape.Font = Enum.Font.DenkOne
-Cape.Text = "Cape"
-Cape.TextColor3 = Color3.fromRGB(0, 0, 0)
-Cape.TextScaled = true
-Cape.TextSize = 14.000
-Cape.TextWrapped = true
-
-Visual.Name = "Visual"
-Visual.Parent = HackFrame
-Visual.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Visual.BackgroundTransparency = 0.400
-Visual.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Visual.BorderSizePixel = 0
-Visual.Position = UDim2.new(0.295649737, 0, 0.027814569, 0)
-Visual.Size = UDim2.new(0.197275475, 0, 0.943046331, 0)
-
-UICorner_3.Parent = Visual
-
-VText.Name = "VText"
-VText.Parent = Visual
-VText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-VText.BackgroundTransparency = 1.010
-VText.BorderColor3 = Color3.fromRGB(0, 0, 0)
-VText.BorderSizePixel = 0
-VText.Position = UDim2.new(0.0843989775, 0, 0.0126404492, 0)
-VText.Size = UDim2.new(0.828644514, 0, 0.144662917, 0)
-VText.Font = Enum.Font.Highway
-VText.Text = "Visual"
-VText.TextColor3 = Color3.fromRGB(255, 0, 0)
-VText.TextScaled = true
-VText.TextSize = 14.000
-VText.TextWrapped = true
-
-skybox.Name = "skybox"
-skybox.Parent = Visual
-skybox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-skybox.BackgroundTransparency = 1.000
-skybox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-skybox.BorderSizePixel = 0
-skybox.Position = UDim2.new(0.24278982, 0, 0.175561801, 0)
-skybox.Size = UDim2.new(0.511508942, 0, 0.0702247173, 0)
-skybox.Font = Enum.Font.DenkOne
-skybox.Text = "skybox"
-skybox.TextColor3 = Color3.fromRGB(0, 0, 0)
-skybox.TextScaled = true
-skybox.TextSize = 14.000
-skybox.TextWrapped = true
+Aura.Name = "Aura"
+Aura.Parent = Combat
+Aura.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Aura.BackgroundTransparency = 1.000
+Aura.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Aura.BorderSizePixel = 0
+Aura.Position = UDim2.new(0.263427109, 0, 0.31601125, 0)
+Aura.Size = UDim2.new(0.511508942, 0, 0.0702247173, 0)
+Aura.Font = Enum.Font.DenkOne
+Aura.Text = "Aura"
+Aura.TextColor3 = Color3.fromRGB(0, 0, 0)
+Aura.TextScaled = true
+Aura.TextSize = 14.000
+Aura.TextWrapped = true
 
 World.Name = "World"
 World.Parent = HackFrame
@@ -207,7 +152,7 @@ World.BorderSizePixel = 0
 World.Position = UDim2.new(0.49635753, 0, 0.027814569, 0)
 World.Size = UDim2.new(0.197275475, 0, 0.943046331, 0)
 
-UICorner_4.Parent = World
+UICorner_3.Parent = World
 
 WText.Name = "WText"
 WText.Parent = World
@@ -239,9 +184,80 @@ ChatSpammer.TextScaled = true
 ChatSpammer.TextSize = 14.000
 ChatSpammer.TextWrapped = true
 
+Visual.Name = "Visual"
+Visual.Parent = HackFrame
+Visual.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Visual.BackgroundTransparency = 0.400
+Visual.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Visual.BorderSizePixel = 0
+Visual.Position = UDim2.new(0.295649737, 0, 0.027814569, 0)
+Visual.Size = UDim2.new(0.197275475, 0, 0.943046331, 0)
+
+UICorner_4.Parent = Visual
+
+VText.Name = "VText"
+VText.Parent = Visual
+VText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VText.BackgroundTransparency = 1.010
+VText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VText.BorderSizePixel = 0
+VText.Position = UDim2.new(0.0843989775, 0, 0.0126404492, 0)
+VText.Size = UDim2.new(0.828644514, 0, 0.144662917, 0)
+VText.Font = Enum.Font.Highway
+VText.Text = "Visual"
+VText.TextColor3 = Color3.fromRGB(255, 0, 0)
+VText.TextScaled = true
+VText.TextSize = 14.000
+VText.TextWrapped = true
+
+skybox.Name = "skybox"
+skybox.Parent = Visual
+skybox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+skybox.BackgroundTransparency = 1.000
+skybox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+skybox.BorderSizePixel = 0
+skybox.Position = UDim2.new(0.24278982, 0, 0.175561801, 0)
+skybox.Size = UDim2.new(0.511508942, 0, 0.0702247173, 0)
+skybox.Font = Enum.Font.DenkOne
+skybox.Text = "skybox"
+skybox.TextColor3 = Color3.fromRGB(0, 0, 0)
+skybox.TextScaled = true
+skybox.TextSize = 14.000
+skybox.TextWrapped = true
+
+CustomCape.Name = "Custom Cape"
+CustomCape.Parent = Visual
+CustomCape.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CustomCape.BackgroundTransparency = 1.000
+CustomCape.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CustomCape.BorderSizePixel = 0
+CustomCape.Position = UDim2.new(0.242883757, 0, 0.245786518, 0)
+CustomCape.Size = UDim2.new(0.511508942, 0, 0.0702247173, 0)
+CustomCape.Font = Enum.Font.DenkOne
+CustomCape.Text = "Custom Cape"
+CustomCape.TextColor3 = Color3.fromRGB(0, 0, 0)
+CustomCape.TextScaled = true
+CustomCape.TextSize = 14.000
+CustomCape.TextWrapped = true
+
+Cape.Name = "Cape"
+Cape.Parent = Visual
+Cape.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cape.BackgroundTransparency = 1.000
+Cape.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cape.BorderSizePixel = 0
+Cape.Position = UDim2.new(0.242883757, 0, 0.31601125, 0)
+Cape.Size = UDim2.new(0.511508942, 0, 0.0702247173, 0)
+Cape.Font = Enum.Font.DenkOne
+Cape.Text = "Cape"
+Cape.TextColor3 = Color3.fromRGB(0, 0, 0)
+Cape.TextScaled = true
+Cape.TextSize = 14.000
+Cape.TextWrapped = true
+
 -- Scripts:
 
-local function IVXH_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
+local function SKECMJ_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local openFrameButton = script.Parent -- Reference to the OpenFrame TextButton
@@ -261,8 +277,8 @@ local function IVXH_fake_script() -- OpenFrame.ToggleHackFrameVisibility
 	-- Connect the function to the button's click event
 	openFrameButton.MouseButton1Click:Connect(toggleHackFrameVisibility)
 end
-coroutine.wrap(IVXH_fake_script)()
-local function SYOUK_fake_script() -- Fly.LocalScript 
+coroutine.wrap(SKECMJ_fake_script)()
+local function DBRYL_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	local player = game.Players.LocalPlayer
@@ -324,8 +340,8 @@ local function SYOUK_fake_script() -- Fly.LocalScript
 		end
 	end)
 end
-coroutine.wrap(SYOUK_fake_script)()
-local function LEBKEAS_fake_script() -- Speed.LocalScript 
+coroutine.wrap(DBRYL_fake_script)()
+local function WNREO_fake_script() -- Speed.LocalScript 
 	local script = Instance.new('LocalScript', Speed)
 
 	local SpeedToggled = false
@@ -341,9 +357,9 @@ local function LEBKEAS_fake_script() -- Speed.LocalScript
 	end
 	script.Parent.MouseButton1Click:Connect(Speed)
 end
-coroutine.wrap(LEBKEAS_fake_script)()
-local function YYZOBP_fake_script() -- Killaura.LocalScript 
-	local script = Instance.new('LocalScript', Killaura)
+coroutine.wrap(WNREO_fake_script)()
+local function MWNJYQD_fake_script() -- Aura.LocalScript 
+	local script = Instance.new('LocalScript', Aura)
 
 	local Players = game:GetService("Players")
 	local LocalPlayer = Players.LocalPlayer
@@ -525,8 +541,93 @@ local function YYZOBP_fake_script() -- Killaura.LocalScript
 	--  Killaura
 	script.Parent.MouseButton1Click:Connect(EnableKillaura)
 end
-coroutine.wrap(YYZOBP_fake_script)()
-local function VFDN_fake_script() -- Cape.LocalScript 
+coroutine.wrap(MWNJYQD_fake_script)()
+local function WHTI_fake_script() -- ChatSpammer.LocalScript 
+	local script = Instance.new('LocalScript', ChatSpammer)
+
+	local function Spam()
+		while true do
+			wait(0.1)
+			local args = {
+				[1] = "Use Oxygen | Oxygen On Top!",
+				[2] = "All"
+			}
+	
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(Spam)
+end
+coroutine.wrap(WHTI_fake_script)()
+local function QHHFH_fake_script() -- skybox.LocalScript 
+	local script = Instance.new('LocalScript', skybox)
+
+	local Images = {--\\What 99% Of you like to see xd
+		"rbxassetid://14993957229", 
+		"rbxassetid://14993958854",
+		"rbxassetid://14993961695"
+	} 
+	local sky = Instance.new("Sky", game.Lighting)
+	
+	local function Sky()
+		sky.SkyboxBk = Images[1]
+		sky.SkyboxDn = Images[2]
+		sky.SkyboxFt = Images[2]
+		sky.SkyboxLf = Images[3]
+		sky.SkyboxRt = Images[1]
+		sky.SkyboxUp = Images[1]
+		sky.Parent = game.Lighting
+	end
+	script.Parent.MouseButton1Click:Connect(Sky)
+end
+coroutine.wrap(QHHFH_fake_script)()
+local function NKSA_fake_script() -- CustomCape.LocalScript 
+	local script = Instance.new('LocalScript', CustomCape)
+
+	local Lplr = game.Players.LocalPlayer
+	
+	local function CreateCape(DecalId)
+		local Cape = Instance.new("Part")
+	
+		Cape.Parent = Lplr.Character
+		Cape.Name = "Cape"
+		Cape.Size = Vector3.new(0.2, 0.2, 0.08)
+		Cape.Material = Enum.Material.SmoothPlastic
+		Cape.Color = Color3.new(0.105882, 0.105882, 0.105882)
+		Cape.CanCollide = false
+	
+		local BlockMesh = Instance.new("BlockMesh")
+	
+		BlockMesh.Parent = Cape
+		BlockMesh.Name = "Mesh"
+		BlockMesh.Scale = Vector3.new(9, 17.5, 0.5)
+		BlockMesh.VertexColor = Vector3.new(1, 1, 1)
+	
+		local Motor = Instance.new("Motor")
+	
+		Motor.Parent = Cape
+		Motor.Name = "Motor"
+		Motor.C0 = CFrame.new(0, 2, 0, -4.37113883e-08, 0, 1, 0, 1, 0, -1, 0, -4.37113883e-08)
+		Motor.C1 = CFrame.new(0, 1, 0.449999988, -4.37113883e-08, 0, 1, 0, 1, 0, -1, 0, -4.37113883e-08)
+		Motor.Part1 = Lplr.Character.UpperTorso
+		Motor.Part0 = Cape
+		Motor.CurrentAngle = -0.16208772361278534
+		Motor.DesiredAngle = -0.1002269834280014
+	
+		local Decal = Instance.new("Decal")
+	
+		Decal.Parent = Cape
+		Decal.Name = "Decal"
+		Decal.Face = Enum.NormalId.Back
+		Decal.Texture = "rbxassetid://14993961695"
+		Decal.Transparency = 0
+	end
+	
+	script.Parent.MouseButton1Click:Connect(CreateCape)
+end
+coroutine.wrap(NKSA_fake_script)()
+local function SLBDMH_fake_script() -- Cape.LocalScript 
 	local script = Instance.new('LocalScript', Cape)
 
 	local Lplr = game.Players.LocalPlayer
@@ -565,56 +666,52 @@ local function VFDN_fake_script() -- Cape.LocalScript
 		Decal.Name = "Decal"
 		Decal.Face = Enum.NormalId.Back
 		Decal.Texture = DecalId
+		Decal.Transparency = 0
 	end
 	
 	script.Parent.MouseButton1Click:Connect(CreateCape)
 end
-coroutine.wrap(VFDN_fake_script)()
-local function SNSPK_fake_script() -- skybox.LocalScript 
-	local script = Instance.new('LocalScript', skybox)
-
-	local Images = {--\\What 99% Of you like to see xd
-		"rbxassetid://14993957229", 
-		"rbxassetid://14993958854",
-		"rbxassetid://14993961695"
-	} 
-	local sky = Instance.new("Sky", game.Lighting)
-	
-	local function Sky()
-		sky.SkyboxBk = Images[1]
-		sky.SkyboxDn = Images[2]
-		sky.SkyboxFt = Images[2]
-		sky.SkyboxLf = Images[3]
-		sky.SkyboxRt = Images[1]
-		sky.SkyboxUp = Images[1]
-		sky.Parent = game.Lighting
-	end
-	script.Parent.MouseButton1Click:Connect(Sky)
-end
-coroutine.wrap(SNSPK_fake_script)()
-local function EKTPL_fake_script() -- ChatSpammer.LocalScript 
-	local script = Instance.new('LocalScript', ChatSpammer)
-
-	local function Spam()
-		while true do
-			wait(0.1)
-			local args = {
-				[1] = "Use Oxygen | Oxygen On Top!",
-				[2] = "All"
-			}
-	
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-		end
-	end
-	
-	script.Parent.MouseButton1Click:Connect(Spam)
-end
-coroutine.wrap(EKTPL_fake_script)()
-local function BBFYKBH_fake_script() -- MainGui.LocalScript 
+coroutine.wrap(SLBDMH_fake_script)()
+local function ZHNAP_fake_script() -- MainGui.LocalScript 
 	local script = Instance.new('LocalScript', MainGui)
 
 	game:GetService("UserInputService").JumpRequest:connect(function()
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end)
 end
-coroutine.wrap(BBFYKBH_fake_script)()
+coroutine.wrap(ZHNAP_fake_script)()
+local function EVLX_fake_script() -- MainGui.Notify 
+	local script = Instance.new('LocalScript', MainGui)
+
+	-- Create a notification GUI
+	local notifyGUI = Instance.new("ScreenGui")
+	notifyGUI.Parent = game:GetService("Players").LocalPlayer.PlayerGui
+	
+	-- Create a label to display the notification
+	local notifyLabel = Instance.new("TextLabel")
+	notifyLabel.Size = UDim2.new(0, 200, 0, 50)
+	notifyLabel.Position = UDim2.new(0.5, -100, 0.8)
+	notifyLabel.BackgroundColor3 = Color3.new(0, 0, 0) -- Set the background color to black
+	notifyLabel.TextColor3 = Color3.new(1, 1, 1) -- Set the text color to white
+	notifyLabel.TextStrokeTransparency = 0
+	notifyLabel.Text = "Oxygen 1.9 Loaded! (Credits to Ince0465 for making notification script uwu)"
+	notifyLabel.Font = Enum.Font.Jura -- Set the font to Jura
+	notifyLabel.TextSize = 20 -- Set the text size to 20
+	notifyLabel.Parent = notifyGUI
+	notifyLabel.TextScaled = true
+	
+	-- Create a function to dissolve the notification
+	local function dissolveNotify()
+		notifyLabel.BackgroundTransparency = 0
+		for i = 0, 1, 0.1 do
+			wait(0.05)
+			notifyLabel.BackgroundTransparency = i
+		end
+		notifyGUI:Destroy()
+	end
+	
+	-- Dissolve the notification after 6.5 seconds
+	wait(6.5)
+	dissolveNotify()
+end
+coroutine.wrap(EVLX_fake_script)()
