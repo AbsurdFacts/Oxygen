@@ -4,7 +4,7 @@ fuck vape private
 
 local gameID = game.GameId
 
-writefile("Oxygen1.9/game/saved/" .. gameID ..".lua","local GameID = " .. gameID)
+writefile("Oxygen1.9/game/saved/" .. gameID ..".lua","local GameID = " .. gameID))
 
 local MainGui = Instance.new("ScreenGui")
 local OpenFrame = Instance.new("TextButton")
