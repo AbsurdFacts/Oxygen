@@ -1,10 +1,10 @@
 --[[
-fuck vape private
-]]--
+FUCK VAPE PRIVATE!!!! OXYGEN AND VULKAN ON TOP!!!!!!
+]]
 
-local gameID = game.GameId
+local GameID = game.GameId
 
-writefile("Oxygen 1.9/game/saved/" .. gameID ..".lua","local GameID = " .. gameID .. " -- USE OXYGENNNN")
+writefile("Oxygen 2.0/game/".. GameID ..".lua","local Saved = true --vape sucks")
 
 local MainGui = Instance.new("ScreenGui")
 local OpenFrame = Instance.new("TextButton")
@@ -21,12 +21,20 @@ local World = Instance.new("Frame")
 local UICorner_3 = Instance.new("UICorner")
 local WText = Instance.new("TextLabel")
 local ChatSpammer = Instance.new("TextButton")
-local Visual = Instance.new("Frame")
+local MotionBlur = Instance.new("TextButton")
+local FreeClanPass = Instance.new("TextButton")
+local FreeKit = Instance.new("TextBox")
+local ClaimKit = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
+local ChatBypasser = Instance.new("TextButton")
+local Visual = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
 local VText = Instance.new("TextLabel")
 local skybox = Instance.new("TextButton")
 local CustomCape = Instance.new("TextButton")
 local Cape = Instance.new("TextButton")
+local LogoText2 = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
 
 --Properties:
 
@@ -56,9 +64,10 @@ LogoText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 LogoText.BackgroundTransparency = 1.010
 LogoText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 LogoText.BorderSizePixel = 0
+LogoText.Position = UDim2.new(0.00405473914, 0, 0, 0)
 LogoText.Size = UDim2.new(0.0691220984, 0, 0.152317882, 0)
 LogoText.Font = Enum.Font.Highway
-LogoText.Text = "Oxygen 1.9"
+LogoText.Text = "Oxygen"
 LogoText.TextColor3 = Color3.fromRGB(255, 0, 0)
 LogoText.TextScaled = true
 LogoText.TextSize = 14.000
@@ -78,7 +87,7 @@ Combat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Combat.BackgroundTransparency = 0.400
 Combat.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Combat.BorderSizePixel = 0
-Combat.Position = UDim2.new(0.0948536843, 0, 0.027814569, 0)
+Combat.Position = UDim2.new(0.20331794, 0, 0.027814569, 0)
 Combat.Size = UDim2.new(0.197275475, 0, 0.943046331, 0)
 
 UICorner_2.Parent = Combat
@@ -149,7 +158,7 @@ World.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 World.BackgroundTransparency = 0.400
 World.BorderColor3 = Color3.fromRGB(0, 0, 0)
 World.BorderSizePixel = 0
-World.Position = UDim2.new(0.49635753, 0, 0.027814569, 0)
+World.Position = UDim2.new(0.598232865, 0, 0.027814569, 0)
 World.Size = UDim2.new(0.197275475, 0, 0.943046331, 0)
 
 UICorner_3.Parent = World
@@ -184,16 +193,93 @@ ChatSpammer.TextScaled = true
 ChatSpammer.TextSize = 14.000
 ChatSpammer.TextWrapped = true
 
+MotionBlur.Name = "MotionBlur"
+MotionBlur.Parent = World
+MotionBlur.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MotionBlur.BackgroundTransparency = 1.000
+MotionBlur.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MotionBlur.BorderSizePixel = 0
+MotionBlur.Position = UDim2.new(0.242789879, 0, 0.245786518, 0)
+MotionBlur.Size = UDim2.new(0.511508942, 0, 0.0702247173, 0)
+MotionBlur.Font = Enum.Font.DenkOne
+MotionBlur.Text = "MotionBlur [OFF]"
+MotionBlur.TextColor3 = Color3.fromRGB(0, 0, 0)
+MotionBlur.TextScaled = true
+MotionBlur.TextSize = 14.000
+MotionBlur.TextWrapped = true
+
+FreeClanPass.Name = "FreeClanPass"
+FreeClanPass.Parent = World
+FreeClanPass.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FreeClanPass.BackgroundTransparency = 1.000
+FreeClanPass.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FreeClanPass.BorderSizePixel = 0
+FreeClanPass.Position = UDim2.new(0.242789984, 0, 0.31601125, 0)
+FreeClanPass.Size = UDim2.new(0.511508942, 0, 0.0702247173, 0)
+FreeClanPass.Font = Enum.Font.DenkOne
+FreeClanPass.Text = "FreeClanPass"
+FreeClanPass.TextColor3 = Color3.fromRGB(0, 0, 0)
+FreeClanPass.TextScaled = true
+FreeClanPass.TextSize = 14.000
+FreeClanPass.TextWrapped = true
+
+FreeKit.Name = "FreeKit"
+FreeKit.Parent = World
+FreeKit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FreeKit.BackgroundTransparency = 0.500
+FreeKit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FreeKit.BorderSizePixel = 0
+FreeKit.Position = UDim2.new(0.238936797, 0, 0.386235952, 0)
+FreeKit.Size = UDim2.new(0, 200, 0, 50)
+FreeKit.Font = Enum.Font.DenkOne
+FreeKit.PlaceholderText = "FreeKit"
+FreeKit.Text = ""
+FreeKit.TextColor3 = Color3.fromRGB(0, 0, 0)
+FreeKit.TextScaled = true
+FreeKit.TextSize = 14.000
+FreeKit.TextWrapped = true
+
+ClaimKit.Name = "ClaimKit"
+ClaimKit.Parent = FreeKit
+ClaimKit.BackgroundColor3 = Color3.fromRGB(0, 255, 1)
+ClaimKit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ClaimKit.BorderSizePixel = 0
+ClaimKit.Position = UDim2.new(0, 0, 1.12, 0)
+ClaimKit.Size = UDim2.new(0, 200, 0, 50)
+ClaimKit.Font = Enum.Font.DenkOne
+ClaimKit.Text = "Claim Kit"
+ClaimKit.TextColor3 = Color3.fromRGB(0, 0, 0)
+ClaimKit.TextScaled = true
+ClaimKit.TextSize = 14.000
+ClaimKit.TextWrapped = true
+
+UICorner_4.Parent = ClaimKit
+
+ChatBypasser.Name = "ChatBypasser"
+ChatBypasser.Parent = World
+ChatBypasser.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ChatBypasser.BackgroundTransparency = 1.000
+ChatBypasser.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ChatBypasser.BorderSizePixel = 0
+ChatBypasser.Position = UDim2.new(0.237651408, 0, 0.535112381, 0)
+ChatBypasser.Size = UDim2.new(0.511508942, 0, 0.0702247173, 0)
+ChatBypasser.Font = Enum.Font.DenkOne
+ChatBypasser.Text = "ChatBypasser"
+ChatBypasser.TextColor3 = Color3.fromRGB(0, 0, 0)
+ChatBypasser.TextScaled = true
+ChatBypasser.TextSize = 14.000
+ChatBypasser.TextWrapped = true
+
 Visual.Name = "Visual"
 Visual.Parent = HackFrame
 Visual.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Visual.BackgroundTransparency = 0.400
 Visual.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Visual.BorderSizePixel = 0
-Visual.Position = UDim2.new(0.295649737, 0, 0.027814569, 0)
+Visual.Position = UDim2.new(0.401072949, 0, 0.027814569, 0)
 Visual.Size = UDim2.new(0.197275475, 0, 0.943046331, 0)
 
-UICorner_4.Parent = Visual
+UICorner_5.Parent = Visual
 
 VText.Name = "VText"
 VText.Parent = Visual
@@ -255,9 +341,27 @@ Cape.TextScaled = true
 Cape.TextSize = 14.000
 Cape.TextWrapped = true
 
+LogoText2.Name = "LogoText2"
+LogoText2.Parent = MainGui
+LogoText2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LogoText2.BackgroundTransparency = 1.010
+LogoText2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LogoText2.BorderSizePixel = 0
+LogoText2.Position = UDim2.new(0.00405473914, 0, 0.107284769, 0)
+LogoText2.Size = UDim2.new(0.0691220984, 0, 0.152317882, 0)
+LogoText2.Font = Enum.Font.Highway
+LogoText2.Text = "2.0"
+LogoText2.TextColor3 = Color3.fromRGB(249, 255, 255)
+LogoText2.TextScaled = true
+LogoText2.TextSize = 14.000
+LogoText2.TextWrapped = true
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.33, Color3.fromRGB(255, 0, 2)), ColorSequenceKeypoint.new(0.38, Color3.fromRGB(255, 112, 113)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Parent = LogoText2
+
 -- Scripts:
 
-local function SKECMJ_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
+local function POCGTV_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local openFrameButton = script.Parent -- Reference to the OpenFrame TextButton
@@ -277,8 +381,8 @@ local function SKECMJ_fake_script() -- OpenFrame.ToggleHackFrameVisibility
 	-- Connect the function to the button's click event
 	openFrameButton.MouseButton1Click:Connect(toggleHackFrameVisibility)
 end
-coroutine.wrap(SKECMJ_fake_script)()
-local function DBRYL_fake_script() -- Fly.LocalScript 
+coroutine.wrap(POCGTV_fake_script)()
+local function HXMT_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	local player = game.Players.LocalPlayer
@@ -340,8 +444,8 @@ local function DBRYL_fake_script() -- Fly.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DBRYL_fake_script)()
-local function WNREO_fake_script() -- Speed.LocalScript 
+coroutine.wrap(HXMT_fake_script)()
+local function TOQDH_fake_script() -- Speed.LocalScript 
 	local script = Instance.new('LocalScript', Speed)
 
 	local SpeedToggled = false
@@ -357,8 +461,8 @@ local function WNREO_fake_script() -- Speed.LocalScript
 	end
 	script.Parent.MouseButton1Click:Connect(Speed)
 end
-coroutine.wrap(WNREO_fake_script)()
-local function MWNJYQD_fake_script() -- Aura.LocalScript 
+coroutine.wrap(TOQDH_fake_script)()
+local function JBLCS_fake_script() -- Aura.LocalScript 
 	local script = Instance.new('LocalScript', Aura)
 
 	local Players = game:GetService("Players")
@@ -541,8 +645,8 @@ local function MWNJYQD_fake_script() -- Aura.LocalScript
 	--  Killaura
 	script.Parent.MouseButton1Click:Connect(EnableKillaura)
 end
-coroutine.wrap(MWNJYQD_fake_script)()
-local function WHTI_fake_script() -- ChatSpammer.LocalScript 
+coroutine.wrap(JBLCS_fake_script)()
+local function BNSBUA_fake_script() -- ChatSpammer.LocalScript 
 	local script = Instance.new('LocalScript', ChatSpammer)
 
 	local function Spam()
@@ -559,8 +663,85 @@ local function WHTI_fake_script() -- ChatSpammer.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(Spam)
 end
-coroutine.wrap(WHTI_fake_script)()
-local function QHHFH_fake_script() -- skybox.LocalScript 
+coroutine.wrap(BNSBUA_fake_script)()
+local function DZQOWH_fake_script() -- MotionBlur.LocalScript 
+	local script = Instance.new('LocalScript', MotionBlur)
+
+	local button = script.Parent
+	local blurEffect = Instance.new("BlurEffect", game.Lighting)
+	local player = game.Players.LocalPlayer
+	local camera = game.Workspace.CurrentCamera
+	
+	blurEffect.Enabled = false
+	local isBlurActive = false
+	local blurIntensity = 5 -- Adjust the blur intensity as needed
+	local lastCameraPosition = camera.CFrame.Position
+	
+	button.MouseButton1Click:Connect(function()
+		isBlurActive = not isBlurActive
+		if isBlurActive then
+			button.Text = "MotionBlur [ON]"
+		else
+			button.Text = "MotionBlur [OFF]"
+			blurEffect.Enabled = true
+			blurEffect.Size = 0
+		end
+	end)
+	
+	local function updateBlur()
+		if isBlurActive then
+			local currentCameraPosition = camera.CFrame.Position
+			local deltaPosition = (currentCameraPosition - lastCameraPosition).magnitude
+			blurEffect.Size = math.clamp(deltaPosition * blurIntensity, 0, 24) -- Adjust max blur size as needed
+			lastCameraPosition = currentCameraPosition
+		end
+	end
+	
+	game:GetService("RunService").RenderStepped:Connect(updateBlur)
+end
+coroutine.wrap(DZQOWH_fake_script)()
+local function RZUTXSR_fake_script() -- FreeClanPass.LocalScript 
+	local script = Instance.new('LocalScript', FreeClanPass)
+
+	local Lplr = game:GetService("Players").LocalPlayer
+	
+	local function EEE()
+		Lplr:SetAttribute("ClanPassPaid", true)
+	end
+	
+	script.Parent.MouseButton1Click:Connect(EEE)
+end
+coroutine.wrap(RZUTXSR_fake_script)()
+local function XCDOY_fake_script() -- FreeKit.LocalScript 
+	local script = Instance.new('LocalScript', FreeKit)
+
+	local ExecuteButton = script.Parent.ClaimKit -- path to execute button
+	local ExecuteTextbox = script.Parent -- path to executetextbox
+	
+	ExecuteButton.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer:SetAttribute("PlayingAsKit", ExecuteTextbox)
+	end)
+end
+coroutine.wrap(XCDOY_fake_script)()
+local function BDPZWEB_fake_script() -- ChatBypasser.LocalScript 
+	local script = Instance.new('LocalScript', ChatBypasser)
+
+	local function Spam2()
+		while true do
+			wait(0.1)
+			local args = {
+				[1] = "f.u.c.k.i.s.g.o.o.d",
+				[2] = "All"
+			}
+	
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(Spam2)
+end
+coroutine.wrap(BDPZWEB_fake_script)()
+local function FBESV_fake_script() -- skybox.LocalScript 
 	local script = Instance.new('LocalScript', skybox)
 
 	local Images = {--\\What 99% Of you like to see xd
@@ -581,8 +762,8 @@ local function QHHFH_fake_script() -- skybox.LocalScript
 	end
 	script.Parent.MouseButton1Click:Connect(Sky)
 end
-coroutine.wrap(QHHFH_fake_script)()
-local function NKSA_fake_script() -- CustomCape.LocalScript 
+coroutine.wrap(FBESV_fake_script)()
+local function CVCGZD_fake_script() -- CustomCape.LocalScript 
 	local script = Instance.new('LocalScript', CustomCape)
 
 	local Lplr = game.Players.LocalPlayer
@@ -626,8 +807,8 @@ local function NKSA_fake_script() -- CustomCape.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(CreateCape)
 end
-coroutine.wrap(NKSA_fake_script)()
-local function SLBDMH_fake_script() -- Cape.LocalScript 
+coroutine.wrap(CVCGZD_fake_script)()
+local function RDUM_fake_script() -- Cape.LocalScript 
 	local script = Instance.new('LocalScript', Cape)
 
 	local Lplr = game.Players.LocalPlayer
@@ -671,16 +852,16 @@ local function SLBDMH_fake_script() -- Cape.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(CreateCape)
 end
-coroutine.wrap(SLBDMH_fake_script)()
-local function ZHNAP_fake_script() -- MainGui.LocalScript 
+coroutine.wrap(RDUM_fake_script)()
+local function LWDWQ_fake_script() -- MainGui.LocalScript 
 	local script = Instance.new('LocalScript', MainGui)
 
 	game:GetService("UserInputService").JumpRequest:connect(function()
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end)
 end
-coroutine.wrap(ZHNAP_fake_script)()
-local function EVLX_fake_script() -- MainGui.Notify 
+coroutine.wrap(LWDWQ_fake_script)()
+local function XESQFKL_fake_script() -- MainGui.Notify 
 	local script = Instance.new('LocalScript', MainGui)
 
 	-- Create a notification GUI
@@ -714,4 +895,4 @@ local function EVLX_fake_script() -- MainGui.Notify
 	wait(6.5)
 	dissolveNotify()
 end
-coroutine.wrap(EVLX_fake_script)()
+coroutine.wrap(XESQFKL_fake_script)()
