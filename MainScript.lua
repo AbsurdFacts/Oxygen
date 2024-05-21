@@ -41,6 +41,7 @@ local UIGradient = Instance.new("UIGradient")
 MainGui.Name = "MainGui"
 MainGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 MainGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+MainGui.ResetOnSpawn = false
 
 OpenFrame.Name = "OpenFrame"
 OpenFrame.Parent = MainGui
