@@ -1,11 +1,11 @@
 --[[ 
-vape how the fuck u dont have a MotionBlur :troll:
+vape how the fuck u dont have a free kit script??? :troll:
 
 
-OXYGEN 2.1!!!!
+OXYGEN 2.2!!!!
 ]]--
 
-writefile("Oxygen 2.1/game/" .. game.GameId ..".lua","local GameID = " .. game.GameId)
+writefile("Oxygen 2.2/game/" .. game.GameId ..".lua","local GameID = " .. game.GameId)
 
 local UI = Instance.new("ScreenGui")
 local OpenFrame = Instance.new("TextButton")
@@ -38,13 +38,12 @@ local UICorner_10 = Instance.new("UICorner")
 local FreeKit = Instance.new("TextBox")
 local ClaimKit = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
-local Intro = Instance.new("Frame")
-local IntroText = Instance.new("TextLabel")
 
 --Properties:
 
 UI.Name = "UI"
 UI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+UI.Enabled = false
 UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 UI.ResetOnSpawn = false
 
@@ -318,32 +317,9 @@ ClaimKit.TextWrapped = true
 
 UICorner_11.Parent = ClaimKit
 
-Intro.Name = "Intro"
-Intro.Parent = UI
-Intro.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Intro.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Intro.BorderSizePixel = 0
-Intro.Size = UDim2.new(1, 0, 1, 0)
-
-IntroText.Name = "IntroText"
-IntroText.Parent = Intro
-IntroText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-IntroText.BackgroundTransparency = 1.000
-IntroText.BorderColor3 = Color3.fromRGB(0, 0, 0)
-IntroText.BorderSizePixel = 0
-IntroText.Position = UDim2.new(0.391370565, 0, 0.464723915, 0)
-IntroText.Size = UDim2.new(0.201015234, 0, 0.0966257676, 0)
-IntroText.Font = Enum.Font.Merriweather
-IntroText.Text = "Oxygen Client | 2.1"
-IntroText.TextColor3 = Color3.fromRGB(254, 252, 255)
-IntroText.TextScaled = true
-IntroText.TextSize = 14.000
-IntroText.TextTransparency = 1.000
-IntroText.TextWrapped = true
-
 -- Scripts:
 
-local function JZIU_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
+local function ZTZVT_fake_script() -- OpenFrame.ToggleHackFrameVisibility 
 	local script = Instance.new('LocalScript', OpenFrame)
 
 	local openFrameButton = script.Parent -- Reference to the OpenFrame TextButton
@@ -363,16 +339,16 @@ local function JZIU_fake_script() -- OpenFrame.ToggleHackFrameVisibility
 	-- Connect the function to the button's click event
 	openFrameButton.MouseButton1Click:Connect(toggleHackFrameVisibility)
 end
-coroutine.wrap(JZIU_fake_script)()
-local function JJCUMSD_fake_script() -- UI.InfJump 
+coroutine.wrap(ZTZVT_fake_script)()
+local function XELJWQI_fake_script() -- UI.InfJump 
 	local script = Instance.new('LocalScript', UI)
 
 	game:GetService("UserInputService").JumpRequest:connect(function()
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end)
 end
-coroutine.wrap(JJCUMSD_fake_script)()
-local function VLQAIYZ_fake_script() -- Speed.Speed 
+coroutine.wrap(XELJWQI_fake_script)()
+local function LBXEX_fake_script() -- Speed.Speed 
 	local script = Instance.new('LocalScript', Speed)
 
 	local SpeedToggled = false
@@ -388,8 +364,8 @@ local function VLQAIYZ_fake_script() -- Speed.Speed
 	end
 	script.Parent.MouseButton1Click:Connect(Speed)
 end
-coroutine.wrap(VLQAIYZ_fake_script)()
-local function MXNBZJH_fake_script() -- Aura.Aura 
+coroutine.wrap(LBXEX_fake_script)()
+local function CSSGRMV_fake_script() -- Aura.Aura 
 	local script = Instance.new('LocalScript', Aura)
 
 	local Players = game:GetService("Players")
@@ -572,8 +548,8 @@ local function MXNBZJH_fake_script() -- Aura.Aura
 	--  Killaura
 	script.Parent.MouseButton1Click:Connect(EnableKillaura)
 end
-coroutine.wrap(MXNBZJH_fake_script)()
-local function QPEPHK_fake_script() -- Fly.Fly 
+coroutine.wrap(CSSGRMV_fake_script)()
+local function NAWKS_fake_script() -- Fly.Fly 
 	local script = Instance.new('LocalScript', Fly)
 
 	local player = game.Players.LocalPlayer
@@ -635,8 +611,8 @@ local function QPEPHK_fake_script() -- Fly.Fly
 		end
 	end)
 end
-coroutine.wrap(QPEPHK_fake_script)()
-local function MFLP_fake_script() -- Combat.Drag1 
+coroutine.wrap(NAWKS_fake_script)()
+local function TPZJXBV_fake_script() -- Combat.Drag1 
 	local script = Instance.new('LocalScript', Combat)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -679,8 +655,8 @@ local function MFLP_fake_script() -- Combat.Drag1
 		end
 	end)
 end
-coroutine.wrap(MFLP_fake_script)()
-local function TXNJNO_fake_script() -- Skybox.skybox 
+coroutine.wrap(TPZJXBV_fake_script)()
+local function ZVLPT_fake_script() -- Skybox.skybox 
 	local script = Instance.new('LocalScript', Skybox)
 
 	local Images = {--\\What 99% Of you like to see xd
@@ -701,8 +677,8 @@ local function TXNJNO_fake_script() -- Skybox.skybox
 	end
 	script.Parent.MouseButton1Click:Connect(Sky)
 end
-coroutine.wrap(TXNJNO_fake_script)()
-local function NPIUKR_fake_script() -- CustomCape.CustomCape 
+coroutine.wrap(ZVLPT_fake_script)()
+local function IQCQXQ_fake_script() -- CustomCape.CustomCape 
 	local script = Instance.new('LocalScript', CustomCape)
 
 	local Lplr = game.Players.LocalPlayer
@@ -746,8 +722,8 @@ local function NPIUKR_fake_script() -- CustomCape.CustomCape
 	
 	script.Parent.MouseButton1Click:Connect(CreateCape)
 end
-coroutine.wrap(NPIUKR_fake_script)()
-local function UHIF_fake_script() -- Visuals.Drag2 
+coroutine.wrap(IQCQXQ_fake_script)()
+local function LIMZKI_fake_script() -- Visuals.Drag2 
 	local script = Instance.new('LocalScript', Visuals)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -790,8 +766,8 @@ local function UHIF_fake_script() -- Visuals.Drag2
 		end
 	end)
 end
-coroutine.wrap(UHIF_fake_script)()
-local function SMBIK_fake_script() -- Disguise.Disguise 
+coroutine.wrap(LIMZKI_fake_script)()
+local function AJABAB_fake_script() -- Disguise.Disguise 
 	local script = Instance.new('LocalScript', Disguise)
 
 	local Lplr = game.Players.LocalPlayer
@@ -802,8 +778,8 @@ local function SMBIK_fake_script() -- Disguise.Disguise
 	
 	script.Parent.MouseButton1Click:Connect(ChangeAvatar)
 end
-coroutine.wrap(SMBIK_fake_script)()
-local function SMREQ_fake_script() -- ChatSpammer.ChatSpammer 
+coroutine.wrap(AJABAB_fake_script)()
+local function VMEMJR_fake_script() -- ChatSpammer.ChatSpammer 
 	local script = Instance.new('LocalScript', ChatSpammer)
 
 	local function Spam()
@@ -820,8 +796,8 @@ local function SMREQ_fake_script() -- ChatSpammer.ChatSpammer
 	
 	script.Parent.MouseButton1Click:Connect(Spam)
 end
-coroutine.wrap(SMREQ_fake_script)()
-local function BXBGQS_fake_script() -- ChatDisabler.ChatDisabler 
+coroutine.wrap(VMEMJR_fake_script)()
+local function TKDGTAU_fake_script() -- ChatDisabler.ChatDisabler 
 	local script = Instance.new('LocalScript', ChatDisabler)
 
 	local function Spam()
@@ -838,8 +814,8 @@ local function BXBGQS_fake_script() -- ChatDisabler.ChatDisabler
 	
 	script.Parent.MouseButton1Click:Connect(Spam)
 end
-coroutine.wrap(BXBGQS_fake_script)()
-local function UHREJ_fake_script() -- MotionBlur.MotionBlur 
+coroutine.wrap(TKDGTAU_fake_script)()
+local function QLLERPW_fake_script() -- MotionBlur.MotionBlur 
 	local script = Instance.new('LocalScript', MotionBlur)
 
 	local button = script.Parent
@@ -874,8 +850,8 @@ local function UHREJ_fake_script() -- MotionBlur.MotionBlur
 	
 	game:GetService("RunService").RenderStepped:Connect(updateBlur)
 end
-coroutine.wrap(UHREJ_fake_script)()
-local function AHNZA_fake_script() -- FreeKit.FreeKit 
+coroutine.wrap(QLLERPW_fake_script)()
+local function TTNRQE_fake_script() -- FreeKit.FreeKit 
 	local script = Instance.new('LocalScript', FreeKit)
 
 	local ExecuteButton = script.Parent.ClaimKit -- path to execute button
@@ -885,8 +861,8 @@ local function AHNZA_fake_script() -- FreeKit.FreeKit
 		game.Players.LocalPlayer:SetAttribute("PlayingAsKit", ExecuteTextbox)
 	end)
 end
-coroutine.wrap(AHNZA_fake_script)()
-local function UBTCIC_fake_script() -- World.Drag3 
+coroutine.wrap(TTNRQE_fake_script)()
+local function BQUWA_fake_script() -- World.Drag3 
 	local script = Instance.new('LocalScript', World)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -929,33 +905,4 @@ local function UBTCIC_fake_script() -- World.Drag3
 		end
 	end)
 end
-coroutine.wrap(UBTCIC_fake_script)()
-local function DPJGXZR_fake_script() -- Intro.Handler 
-	local script = Instance.new('LocalScript', Intro)
-
-	local Text = script.Parent.IntroText
-	local Screen = script.Parent
-	
-	Text.TextTransparency = 0.9
-	wait(0.5)
-	Text.TextTransparency = 0.8
-	wait(0.5)
-	Text.TextTransparency = 0.7
-	wait(0.5)
-	Text.TextTransparency = 0.6
-	wait(0.5)
-	Text.TextTransparency = 0.5
-	wait(0.5)
-	Text.TextTransparency = 0.4
-	wait(0.5)
-	Text.TextTransparency = 0.3
-	wait(0.5)
-	Text.TextTransparency = 0.2
-	wait(0.5)
-	Text.TextTransparency = 0.1
-	wait(0.5)
-	Text.TextTransparency = 0
-	wait(5)
-	Screen.Visible = false
-end
-coroutine.wrap(DPJGXZR_fake_script)()
+coroutine.wrap(BQUWA_fake_script)()
